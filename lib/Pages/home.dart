@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ressipe/widgets/itemcard.dart';
+import 'package:ressipe/Pages/allrecipe.dart';
+import 'package:ressipe/Pages/favrecipes.dart';
+import 'package:ressipe/widgets/itemrecipe.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -60,7 +62,7 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ItemCards(),
+                      builder: (context) => AllRecipes(),
                     ),
                   );
                 },
@@ -75,7 +77,12 @@ class _HomeState extends State<Home> {
                 ),
                 title: Text('Favourite Recipes'),
                 onTap: () {
-                  //Bapak
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FavRecipes(),
+                    ),
+                  );
                 },
               ),
             ),
@@ -108,7 +115,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(10, 30, 0, 10),
+                padding: const EdgeInsets.fromLTRB(10, 30, 0, 30),
                 child: Container(
                   child: Row(
                     children: <Widget>[
@@ -119,7 +126,8 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-              )
+              ),
+              ItemRecipes()
             ],
           ),
         ),
