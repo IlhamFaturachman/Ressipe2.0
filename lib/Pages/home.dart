@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ressipe/Pages/allrecipe.dart';
 import 'package:ressipe/Pages/favrecipes.dart';
+import 'package:ressipe/widgets/itemcards.dart';
 import 'package:ressipe/widgets/itemrecipe.dart';
 
 class Home extends StatefulWidget {
@@ -35,75 +36,94 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.black,
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
-              child: ListTile(
-                leading: Icon(
-                  Icons.cancel,
-                  size: 40.0,
+        child: Container(
+          color: const Color(0xff161616),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 30),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.cancel,
+                    size: 40.0,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    //bapak
+                  },
                 ),
-                onTap: () {
-                  //bapak
-                },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.save,
-                  size: 30.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.save,
+                    size: 30.0,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'All Recipes',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AllRecipes(),
+                      ),
+                    );
+                  },
                 ),
-                title: Text('All Recipes'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AllRecipes(),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.favorite,
+                    size: 30.0,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'Favourite Recipes',
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
-                  );
-                },
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.favorite,
-                  size: 30.0,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FavRecipes(),
+                      ),
+                    );
+                  },
                 ),
-                title: Text('Favourite Recipes'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => FavRecipes(),
-                    ),
-                  );
-                },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.account_circle,
-                  size: 30.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.account_circle,
+                    size: 30.0,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'Account',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onTap: () {
+                    //Bapak
+                  },
                 ),
-                title: Text('Account'),
-                onTap: () {
-                  //Bapak
-                },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
+          color: const Color(0xff161616),
           child: Column(
             children: <Widget>[
               Container(
@@ -121,13 +141,13 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       Text(
                         "Recommended Recipes",
-                        style: GoogleFonts.montserrat(fontSize: 25),
+                        style: GoogleFonts.montserrat(fontSize: 25, color: Colors.white),
                       )
                     ],
                   ),
                 ),
               ),
-              ItemRecipes()
+              ItemCards()
             ],
           ),
         ),

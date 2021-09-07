@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "423156743395",
+    "project_id": "ressipe2",
+    "storage_bucket": "ressipe2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423156743395:android:db9c13ab6c5a2b739599d6",
+        "android_client_info": {
+          "package_name": "com.example.ressipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423156743395-ihkj5bishb9mfq1vaet3t70hoortjlau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5L5L4bHTG87swqqG4Ozrtbe9QL3Tardg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423156743395-ihkj5bishb9mfq1vaet3t70hoortjlau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

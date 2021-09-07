@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ressipe/widgets/itemcards.dart';
 import 'package:ressipe/widgets/itemrecipe.dart';
 
 class AllRecipes extends StatefulWidget {
@@ -24,7 +25,7 @@ class _AllRecipesState extends State<AllRecipes> {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: [ItemRecipes()],
+            children: [ItemCards()],
           ),
         ),
       ),

@@ -24,7 +24,7 @@ class _FavRecipesState extends State<FavRecipes> {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: [ItemRecipes()],
+            // children: [ItemRecipes()],
           ),
         ),
       ),
